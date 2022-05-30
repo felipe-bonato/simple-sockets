@@ -1,14 +1,8 @@
 #include "../lib/socks.h"
 #include "../lib/logging.h"
 
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <errno.h>
-#include <string.h>
 
 const size_t numChildren = 10;
 
