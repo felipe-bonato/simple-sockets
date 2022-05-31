@@ -1,10 +1,10 @@
 C_CPP = gcc
-C_FLAGS = -Wall -Wextra -Wno-unused-parameter -Wpedantic
+C_FLAGS = -Wall -Wextra -Wno-variadic-macros
 C_FLAGS_DEBUG = -g3 -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls
 C_LANG_VERSION = c11
 C_LIBS = -lpthread
 
-PATH_SRC_FILES = src/main.cpp
+PATH_SRC_FILES = src/main.c
 PATH_OUT_BIN = build/out
 PATH_OUT_BIN_EXTENTION = 
 

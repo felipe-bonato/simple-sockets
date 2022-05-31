@@ -66,7 +66,7 @@ void socks_listen(socket_t sock, size_t allowed_connections)
 	if(listenStatus == -1){
 		logerr("Socks: Could not listen");
 		exit(1); }
-	loginfo("Socks: Listening...");
+	logdebug("Socks: Listening...");
 }
 
 socket_t socks_accept(socket_t sock, socks_addr_t sock_addr)
@@ -78,7 +78,7 @@ socket_t socks_accept(socket_t sock, socks_addr_t sock_addr)
 	if(sock == -1){
 		logerr("Socks: Could not accept connection");
 		exit(1); }
-	loginfo("Socks: Connection accepted");
+	logdebug("Socks: Connection accepted");
 	return sock;
 }
 
@@ -89,7 +89,7 @@ void socks_connect(socket_t sock, socks_addr_t sock_addr)
 	if(connect(sock, (struct sockaddr*)&addr, sizeof(struct sockaddr_in)) == -1){
 		logerr("Socks: Could not connect");
 		exit(1); }
-	loginfo("Socks: Connected");
+	logdebug("Socks: Connected");
 }
 
 /**
